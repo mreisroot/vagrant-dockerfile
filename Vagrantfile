@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.56.11"
 
   # Compartilhando a pasta que contém o Dockerfile
-  config.vm.synced_folder "./viacep", "/home/vagrant"
+  config.vm.synced_folder "./viacep", "/root"
 
   # Provisionar VM pelo Shell
   config.vm.provision "shell", path: "provision.sh"
